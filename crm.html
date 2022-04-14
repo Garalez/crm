@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/normalize.css">
+  <link rel="stylesheet" href="./style/style.css">
+  <title>Crm</title>
+</head>
+<body>
+  <main>
+    <div class="crm-modal" id="modal">
+      <section class="crm">
+        <h1 class="crm__title">Добавить товар</h1>
+        <a class="crm__close" href="#"></a>
+        <fieldset class="crm__fieldset">
+          <ul class="crm__list">
+            <li class="crm__item item1">
+              <label class="crm__item-text" for="name__input">Наименование</label>
+              <input class="crm__item-input" type="text" id="name__input">
+            </li>
+            <li class="crm__item item2">
+              <label class="crm__item-text" for="category__input">Категория</label>
+              <input class="crm__item-input" type="text" id="category__input">
+            </li>
+            <li class="crm__item item3">
+              <label class="crm__item-text" for="units__input">Единицы измерения</label>
+              <input class="crm__item-input" type="text" id="units__input">
+            </li>
+            <li class="crm__item item4">
+              <label class="crm__item-text discount1" for="check1">Дисконт</label>
+              <div>
+                <input class="crm__item-input__checkbox discount2" type="checkbox" id="check1">
+                <input class="crm__item-input crm__item-input__discount" type="text" id="discount__input">
+              </div>
+            </li>
+            <li class="crm__item item5">
+              <label class="crm__item-text" for="description__input">Описание</label>
+              <textarea class="crm__item-input crm__item-input__textarea" id="description__input"></textarea>
+            </li>
+            <li class="crm__item item6">
+              <label class="crm__item-text" for="quantity__input">Количество</label>
+              <input class="crm__item-input" type="text" id="quantity__input">
+            </li>
+            <li class="crm__item item7">
+              <label class="crm__item-text" for="price__input">Цена</label>
+              <input class="crm__item-input" type="text" id="price__input">
+            </li>
+            <li class="crm__item item8">
+              <label class="crm__item-upload" for="file-input">Добавить изображение</label>
+              <input class="crm__item-file" type="file" id="file-input">
+            </li>
+          </ul>
+        </fieldset>
+        <div class="crm__footer">
+          <p class="crm__total">Итоговая стоимость: <span class="total-price">$ 900.00</span></p>
+          <button class="crm__submit">Добавить товар</button>
+        </div>
+      </section>
+    </div>
+
+    <section class="product">
+      <div class="product__title-wrap">
+        <h2 class="product__title">CRM</h2>
+        <p class="product__total">Итоговая стоимость: <span class="total-price">$ 900.00</span></p>
+      </div>
+      <div class="product__header">
+        <ul class="product__header-list">
+          <li class="product__header-item">
+            <button class="product__item-filter">Фильтр</button>
+            <input class="product__item-search" type="search" placeholder="Поиск по наименованию и категории">
+          </li>
+          <li class="product__header-item item-space">
+            <a class="product__item-add" href="#modal">Добавить товар</a>
+          </li>
+        </ul>
+      </div>
+      <div class="product__table-wrap">
+        <table class="product__table">
+          <thead class="product__table-head">
+            <tr class="product__head-list">
+              <th class="product__head-item">ID</th>
+              <th class="product__head-item">Наименование</th>
+              <th class="product__head-item">Категория</th>
+              <th class="product__head-item">ед/изм</th>
+              <th class="product__head-item">количество</th>
+              <th class="product__head-item">цена</th>
+              <th class="product__head-item">ИТОГ</th>
+              <th class="product__head-item"></th>
+            </tr>
+          </thead>
+          <tbody class="product__table-body">
+            <tr class="product__body-list">
+              <td class="product__body-item id-number">246016548</td>
+              <td class="product__body-item item-name">Навигационная система Soundmax</td>
+              <td class="product__body-item item-for">Техника для дома</td>
+              <td class="product__body-item table-units">шт</td>
+              <td class="product__body-item table-quantity">5</td>
+              <td class="product__body-item item-cost">$100</td>
+              <td class="product__body-item cost-total">$500</td>
+              <td class="product__body-item item-links">
+                <button class="product__body-link link1 no-image"></button>
+                <button class="product__body-link link2"></button>
+                <button class="product__body-link link3"></button>
+              </td>
+            </tr>
+            <tr class="product__body-list">
+              <td class="product__body-item id-number">937295527</td>
+              <td class="product__body-item item-name">Настольная игра “На 4-х ногах”</td>
+              <td class="product__body-item item-for">Настольные игры</td>
+              <td class="product__body-item table-units">шт</td>
+              <td class="product__body-item table-quantity">12</td>
+              <td class="product__body-item item-cost">$14</td>
+              <td class="product__body-item cost-total">$168</td>
+              <td class="product__body-item item-links">
+                <button class="product__body-link link1"></button>
+                <button class="product__body-link link2"></button>
+                <button class="product__body-link link3"></button>
+              </td>
+            </tr>
+            <tr class="product__body-list">
+              <td class="product__body-item id-number">246016548</td>
+              <td class="product__body-item item-name">Навигационная система Soundmax</td>
+              <td class="product__body-item item-for">Техника для дома</td>
+              <td class="product__body-item table-units">шт</td>
+              <td class="product__body-item table-quantity">5</td>
+              <td class="product__body-item item-cost">$100</td>
+              <td class="product__body-item cost-total">$500</td>
+              <td class="product__body-item item-links">
+                <button class="product__body-link link1"></button>
+                <button class="product__body-link link2"></button>
+                <button class="product__body-link link3"></button>
+              </td>
+            </tr>
+            <tr class="product__body-list">
+              <td class="product__body-item id-number">246016548</td>
+              <td class="product__body-item item-name">Навигационная система Soundmax</td>
+              <td class="product__body-item item-for">Техника для дома</td>
+              <td class="product__body-item table-units">шт</td>
+              <td class="product__body-item table-quantity">5</td>
+              <td class="product__body-item item-cost">$100</td>
+              <td class="product__body-item cost-total">$500</td>
+              <td class="product__body-item item-links">
+                <button class="product__body-link link1"></button>
+                <button class="product__body-link link2"></button>
+                <button class="product__body-link link3"></button>
+              </td>
+            </tr>
+            <tr class="product__body-list">
+              <td class="product__body-item id-number">246016548</td>
+              <td class="product__body-item item-name">Навигационная система Soundmax</td>
+              <td class="product__body-item item-for">Техника для дома</td>
+              <td class="product__body-item table-units">шт</td>
+              <td class="product__body-item table-quantity">5</td>
+              <td class="product__body-item item-cost">$100</td>
+              <td class="product__body-item cost-total">$500</td>
+              <td class="product__body-item item-links">
+                <button class="product__body-link link1"></button>
+                <button class="product__body-link link2"></button>
+                <button class="product__body-link link3"></button>
+              </td>
+            </tr>
+            <tr class="product__body-list">
+              <td class="product__body-item id-number">246016548</td>
+              <td class="product__body-item item-name">Навигационная система Soundmax</td>
+              <td class="product__body-item item-for">Техника для дома</td>
+              <td class="product__body-item table-units">шт</td>
+              <td class="product__body-item table-quantity">5</td>
+              <td class="product__body-item item-cost">$100</td>
+              <td class="product__body-item cost-total">$500</td>
+              <td class="product__body-item item-links">
+                <button class="product__body-link link1"></button>
+                <button class="product__body-link link2"></button>
+                <button class="product__body-link link3"></button>
+              </td>
+            </tr>
+            <tr class="product__body-list">
+              <td class="product__body-item id-number">246016548</td>
+              <td class="product__body-item item-name">Навигационная система Soundmax</td>
+              <td class="product__body-item item-for">Техника для дома</td>
+              <td class="product__body-item table-units">шт</td>
+              <td class="product__body-item table-quantity">5</td>
+              <td class="product__body-item item-cost">$100</td>
+              <td class="product__body-item cost-total">$500</td>
+              <td class="product__body-item item-links">
+                <button class="product__body-link link1"></button>
+                <button class="product__body-link link2"></button>
+                <button class="product__body-link link3"></button>
+              </td>
+            </tr>
+            <tr class="product__body-list">
+              <td class="product__body-item id-number">246016548</td>
+              <td class="product__body-item item-name">Навигационная система Soundmax</td>
+              <td class="product__body-item item-for">Техника для дома</td>
+              <td class="product__body-item table-units">шт</td>
+              <td class="product__body-item table-quantity">5</td>
+              <td class="product__body-item item-cost">$100</td>
+              <td class="product__body-item cost-total">$500</td>
+              <td class="product__body-item item-links">
+                <button class="product__body-link link1"></button>
+                <button class="product__body-link link2"></button>
+                <button class="product__body-link link3"></button>
+              </td>
+            </tr>
+            <tr class="product__body-list">
+              <td class="product__body-item id-number">246016548</td>
+              <td class="product__body-item item-name">Навигационная система Soundmax</td>
+              <td class="product__body-item item-for">Техника для дома</td>
+              <td class="product__body-item table-units">шт</td>
+              <td class="product__body-item table-quantity">5</td>
+              <td class="product__body-item item-cost">$100</td>
+              <td class="product__body-item cost-total">$500</td>
+              <td class="product__body-item item-links">
+                <button class="product__body-link link1"></button>
+                <button class="product__body-link link2"></button>
+                <button class="product__body-link link3"></button>
+              </td>
+            </tr>
+            <tr class="product__body-list">
+              <td class="product__body-item id-number">246016548</td>
+              <td class="product__body-item item-name">Навигационная система Soundmax</td>
+              <td class="product__body-item item-for">Техника для дома</td>
+              <td class="product__body-item table-units">шт</td>
+              <td class="product__body-item table-quantity">5</td>
+              <td class="product__body-item item-cost">$100</td>
+              <td class="product__body-item cost-total">$500</td>
+              <td class="product__body-item item-links">
+                <button class="product__body-link link1"></button>
+                <button class="product__body-link link2"></button>
+                <button class="product__body-link link3"></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="product__nav-wrap">
+          <ul class="product__nav-list">
+            <li class="product__nav-item">
+              <p class="product__nav-text pages-shown">Показывать на странице: 10</p>
+              <a class="product__nav-link pages-details" href="#"></a>
+            </li>
+            <li class="product__nav-item">
+              <p class="product__nav-text pages-number">1-10 of 276</p>
+            </li>
+            <li class="product__nav-item">
+              <a class="product__nav-link arrow-prev" href="#"></a>
+              <a class="product__nav-link arrow-next" href="#"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

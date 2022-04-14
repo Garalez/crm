@@ -1,0 +1,302 @@
+.crm-modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease 0s;
+}
+
+.crm-modal:target {
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+}
+
+.crm {
+  margin: 0 auto;
+  position: relative;
+  max-width: 792px;
+  height: 613px;
+  background-color: var(--main-color);
+}
+
+.crm__fieldset {
+  position: absolute;
+  width: 580px;
+  height: 403px;
+  padding: 28px;
+  left: 106px;
+  top: 104px;
+  background-color: var(--white);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+}
+
+.crm__list {
+  position: relative;
+  display: grid;
+  row-gap: 10px;
+  column-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "one five"
+    "two five"
+    "three six"
+    "four seven";
+}
+
+.crm__item-text {
+  display: block;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.crm__item-input {
+  width: 250px;
+  height: 40px;
+  background: var(--darker-white);
+  border-radius: 6px;
+  border: 0;
+  padding-left: 10px;
+}
+
+.crm__title {
+  padding: 32px 0 0 106px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.crm__title::after {
+  position: absolute;
+  content: "";
+  width: 580px;
+  height: 1px;
+  background: var(--soft-grey);
+  top: 79px;
+  left: 102px;
+}
+
+.crm__close {
+  position: absolute;
+  content: "";
+  background-image: url("../img/cross.svg");
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  left: 742px;
+  top: 20px;
+}
+
+.crm__item-input__textarea {
+  padding-top: 5px;
+  height: 112px;
+  resize: none;
+}
+
+.crm__item-input__discount {
+  width: 200px;
+  grid-area: dsc-input;
+}
+
+.crm__item-input__checkbox {
+  width: 40px;
+  height: 40px;
+  vertical-align: top;
+  margin-right: 9px;
+}
+
+.crm__item-upload {
+  display: block;
+  position: absolute;
+  left: 274px;
+  top: 307px;
+  text-align: center;
+  padding-top: 12px;
+  width: 250px;
+  height: 39px;
+  background: var(--purple);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.crm__item-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.crm__footer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  left: 0px;
+  top: 534px;
+  width: 100%;
+}
+
+.crm__total {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.total-price {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.78px;
+}
+
+.crm__submit {
+  width: 200px;
+  height: 39px;
+  background: var(--purple);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: var(--white);
+  border: 0;
+}
+
+.item1 {
+  grid-area: one;
+}
+
+.item2 {
+  grid-area: two;
+}
+
+.item3 {
+  grid-area: three;
+}
+
+.item4 {
+  grid-area: four;
+}
+
+.item5 {
+  grid-area: five;
+}
+
+.item6 {
+  grid-area: six;
+}
+
+.item7 {
+  grid-area: seven;
+}
+
+@media (max-width: 768px) {
+  .crm__close {
+    left: 507px;
+    top: 34px;
+  }
+
+  .crm {
+    max-width: 792px;
+    height: 901px;
+  }
+
+  .crm__title::after {
+    position: absolute;
+    content: "";
+    width: 70%;
+    height: 1px;
+    background: var(--soft-grey);
+    top: 79px;
+    left: 102px;
+  }
+
+  .crm__fieldset {
+    width: 308px;
+    height: 672px;
+    padding: 28px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .crm__list {
+    row-gap: 10px;
+    column-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six"
+      "seven";
+  }
+
+  .crm__item-upload {
+    left: 0px;
+    top: 580px;
+  }
+
+  .crm__footer {
+    left: 0px;
+    top: 828px;
+  }
+}
+
+@media (max-width: 558px) {
+  .crm__close {
+    left: 390px;
+    top: 34px;
+  }
+
+  .crm__title {
+    padding: 32px 0 0 75px;
+  }
+
+  .crm__title::after {
+    top: 79px;
+    left: 67px;
+  }
+
+  .crm__footer {
+    gap: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .crm__close {
+    left: 288px;
+    top: 34px;
+  }
+
+  .crm__title {
+    padding: 32px 0 0 18px;
+  }
+
+  .crm__title::after {
+    top: 79px;
+    left: 50px;
+  }
+
+  .crm__submit {
+    font-size: 14px;
+  }
+}
